@@ -1,0 +1,138 @@
+﻿/* Estilos globales */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    background-color: #2F96F4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+    .header .logo {
+        height: 50px;
+    }
+
+    .header .text {
+        color: white;
+        font-weight: 500;
+        margin: 0;
+    }
+
+/* Contenedor principal */
+.content-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+/* Botones */
+.blue-btn {
+    background-color: #07447C;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+    .blue-btn:hover {
+        background-color: #2F96F4;
+    }
+
+/* Estilos de inputs y labels */
+.form-label {
+    font-weight: 500;
+    color: #07447C;
+}
+
+.form-control {
+    border: 2px solid #07447C;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 10px;
+    color: #07447C;
+}
+
+/* Estilo del título */
+.display-6 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.fs-5 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Estilos del modal */
+.modal-background {
+    position: fixed;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    display: none;
+    z-index: 3;
+}
+
+.disable-background {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+#main-content.disable-background {
+    filter: blur(2px);
+}
+
+.form-title {
+    font-family: 'Inter', sans-serif;
+    color: #07447C; 
+    font-size: 22px; 
+    font-weight: 500; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.catalog-container {
+    background-color: #FFF !important;
+    border: 1px solid #07447C !important;
+    border-radius: 10px !important;
+    padding: 15px !important;
+    margin-bottom: 15px !important;
+    position: relative !important;
+}
+
+    .catalog-container:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+.btn-view {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #07447C;
+    color: #FFF;
+    border: none;
+    border-radius: 50px;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+    .btn-view:hover {
+        background-color: #052E58;
+    }

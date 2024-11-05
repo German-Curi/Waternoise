@@ -1,0 +1,28 @@
+﻿.catalog-container {
+    background-color: #FFF;
+    border: 1px solid #07447C;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+    .catalog-container:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+.btn-view {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #07447C;
+    color: #FFF;
+    border: none;
+    border-radius: 50px;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+    .btn-view:hover {
+        background-color: #052E58;
+    }
