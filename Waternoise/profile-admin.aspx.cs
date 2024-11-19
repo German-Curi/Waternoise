@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace Waternoise
 {
-    public partial class profile_applicant : System.Web.UI.Page
+    public partial class profile_admin : System.Web.UI.Page
     {
         UserBLL userBLL = new UserBLL();
         User user = new User();

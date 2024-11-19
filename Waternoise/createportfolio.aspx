@@ -44,7 +44,6 @@
                         <asp:ListItem Text="Seleccione" Value="" />
                         <asp:ListItem Text="Dólar" Value="Dólar" />
                         <asp:ListItem Text="Peso" Value="Peso" />
-                        <asp:ListItem Text="Real" Value="Real" />
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="rfvMoneda" runat="server" ControlToValidate="ddlMoneda" InitialValue="" ErrorMessage="Seleccione una moneda." CssClass="text-danger" />
                 </div>

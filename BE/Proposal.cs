@@ -6,60 +6,54 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using static System.Net.Mime.MediaTypeNames;
 
-    namespace BE
+    public enum ProposalStatus
     {
-        public enum ProposalStatus
-        {
-            OPEN,
-            PENDING,
-            CLOSED,
-            REJECTED
-        }
-        public class Proposal : PersistentEntity
-        {
-            public int ID { get; set; }
-            public int UserRequestID { get; set; }
-            public int AdvisorID { get; set; }
-            public int PortfolioID { get; set; }
-            public string Message { get; set; }
-            public User Advisor { get; set; }
-            public Portfolio Portfolio { get; set; }
-            public Request Request { get; set; }
-            public ProposalStatus status { get; set; }
-            public decimal TotalPrice { get; set; }
-            public string Details { get; set; }
+        OPEN,
+        PENDING,
+        CLOSED,
+        REJECTED
+    }
+    public class Proposal : PersistentEntity
+    {
+        public int ID { get; set; }
+        public int RequestID { get; set; }
+        public int UserRequestID { get; set; }
+        public int AdvisorID { get; set; }
+        public int PortfolioID { get; set; }
+        public User Advisor { get; set; }
+        public Portfolio Portfolio { get; set; }
+        public Request Request { get; set; }
+        public ProposalStatus Status { get; set; }
+        public decimal TotalPrice { get; set; }
+        public string Details { get; set; }
 
-            public Proposal() { }
-        //    public Proposal(int id, int requestId, int advisorId, int productId, string status, string state, string region, string propertyType, string currency, double price, string operationType, int? roomsNumber, int? squadMeters, int? coveredSquadMeters, int? bathrooms, int? garages, int? antiquityYears, int? floors, bool? petFriendly)
-        //    {
-        //        ID = id;
-        //        UserRequestID = requestId;
-        //        AdvisorID = advisorId;
-        //        PortfolioID = productId;
-        //        Status = status;
-        //        State = state;
-        //        Region = region;
-        //        PropertyType = propertyType;
-        //        Currency = currency;
-        //        Price = price;
-        //        OperationType = operationType;
-        //        RoomsNumber = roomsNumber;
-        //        SquadMeters = squadMeters;
-        //        CoveredSquadMeters = coveredSquadMeters;
-        //        Bathrooms = bathrooms;
-        //        Garages = garages;
-        //        AntiquityYears = antiquityYears;
-        //        Floors = floors;
-        //        PetFriendly = petFriendly;
-        //    }
-        //}
+        public Proposal(
+            int id,
+            int requestId,
+            int userRequestId,
+            int advisorId,
+            int portfolioId,
+            User advisor,
+            Portfolio portfolio,
+            Request request,
+            ProposalStatus status,
+            decimal totalPrice,
+            string details)
+        {
+            ID = id;
+            RequestID = requestId;
+            UserRequestID = userRequestId;
+            AdvisorID = advisorId;
+            PortfolioID = portfolioId;
+            Advisor = advisor;
+            Portfolio = portfolio;
+            Request = request;
+            Status = status;
+            TotalPrice = totalPrice;
+            Details = details;
+        }
+        public Proposal() { }
 
         public class PaginatedProposals
         {
@@ -81,7 +75,6 @@ namespace BE
                     page = (totalRows - (totalRows - (offset + size))) / size;
                 this.Page = Convert.ToInt32(Math.Floor(page));
             }
-        }
+        }      
     }
-
-}
+}    

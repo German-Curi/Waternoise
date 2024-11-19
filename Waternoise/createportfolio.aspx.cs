@@ -56,16 +56,19 @@ namespace Waternoise
                 {
                     PortfolioBLL catalogoBLL = new PortfolioBLL();
                     Portfolio catalogoAUX = new Portfolio();
+                    User auxUser = new User();
+                    UserBLL userBLL= new UserBLL();
+                    auxUser = userBLL.GetByID(int.Parse(Session["UserID"].ToString()));
 
                     catalogo.Title = txtTitulo.Text;
                     catalogo.Description = txtDescripcion.Text;
-                    catalogoAUX = catalogoBLL.CreatePortfolio(catalogo, Session["UserID"].ToString());
+                    catalogoAUX = catalogoBLL.CreatePortfolio(catalogo, auxUser.ID.ToString());
                     
 
                     foreach (Product p in catalogo.Content)
                     {
                         p.PortfolioID = catalogoAUX.ID;
-                        p.CompanyID = 1; // se tiene q poner el de la compania falta
+                        p.CompanyID = auxUser.CompanyID; // se tiene q poner el de la compania falta
                         catalogoBLL.CreateProduct(p, Session["UserID"].ToString());
                     }
                     hdnMostrarModal.Value = "true";

@@ -50,6 +50,7 @@
     <Compile Include="PortfolioSQLServerDAL.cs" />
     <Compile Include="ProductsSQLServerDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProposalSQLServerDAL.cs" />
     <Compile Include="RequestSQLServerDAL.cs" />
     <Compile Include="UserSQLServerDAL.cs" />
   </ItemGroup>

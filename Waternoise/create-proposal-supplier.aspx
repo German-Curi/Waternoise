@@ -2,7 +2,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <div class="col px-4 py-5">
         <h2 class="form-title" style="text-align: left;">
-            <a href="requestsapplicant.aspx">Solicitudes</a> &rarr; Crear Propuesta
+            <a href="view-request-supplier.aspx">Solicitudes</a> &rarr; Crear Propuesta
         </h2>
         <div class="catalog-container">
             <h3 class="form-title" style="text-align: left;">Datos de la Propuesta</h3>
@@ -51,8 +51,75 @@
                 </div>
             </div>
         </div>
+<!-- Nueva sección: Selección de Portafolio y Detalles de Propuesta -->
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <asp:Label ID="lblPortafolio" runat="server" Text="Seleccionar Portafolio:" CssClass="form-label"></asp:Label>
+                    <asp:DropDownList ID="ddlPortafolios" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlPortafolios_SelectedIndexChanged">
+                    </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="rfvPortafolio" runat="server" ControlToValidate="ddlPortafolios" InitialValue="" ErrorMessage="Debe seleccionar un portafolio." CssClass="text-danger"/>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <asp:GridView ID="grvProductos" runat="server" CssClass="table table-striped" AutoGenerateColumns="false">
+                        <Columns>
+                            <asp:BoundField DataField="Name" HeaderText="Nombre del Producto" />
+                            <asp:BoundField DataField="ProblemType" HeaderText="Tipo de Problemática" />
+                            <asp:BoundField DataField="TechnicalFeatures" HeaderText="Características Técnicas" />
+                            <asp:BoundField DataField="Currency" HeaderText="Moneda" />
+                            <asp:BoundField DataField="Price" HeaderText="Precio"/>
+                            <asp:BoundField DataField="WarrantyPeriod" HeaderText="Período de Garantía" />
+                        </Columns>
+                    </asp:GridView>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <asp:Label ID="lblTotalPrecio" runat="server" Text="Total de la Propuesta (Conversión a Pesos):" CssClass="form-label"></asp:Label>
+                    <asp:TextBox ID="txtTotalPrecio" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                </div>
+                <div class="col-md-6">
+                    <asp:Label ID="lblDetallesPropuesta" runat="server" Text="Detalles de la Propuesta:" CssClass="form-label"></asp:Label>
+                    <asp:TextBox ID="txtDetallesPropuesta" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvDetallesPropuesta" runat="server" ControlToValidate="txtDetallesPropuesta" ErrorMessage="Debe ingresar los detalles de la propuesta." CssClass="text-danger"/>
+                </div>
+            </div>
         <div class="d-flex justify-content-end">
             <asp:Button ID="btnSubmit" runat="server" Text="Enviar Propuesta" CssClass="btn-custom" OnClick="EnviarPropuesta_Click" />
         </div>
+        <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="font-family: 'Inter', sans-serif;">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalConfirmacionLabel">Registro Exitoso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Su registro ha sido completado exitosamente.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- Botón de Aceptar con estilo personalizado -->
+                        <button type="button" class="btn blue-btn" id="btnAceptar" data-bs-dismiss="modal">Aceptar</button>
+                        <asp:HiddenField ID="hdnMostrarModal" runat="server" Value="false" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var mostrarModal = '<%= hdnMostrarModal.ClientID %>';
+            if (document.getElementById(mostrarModal).value === "true") {
+                // Mostrar el modal
+                var modal = new bootstrap.Modal(document.getElementById('modalConfirmacion'));
+                modal.show();
+
+                // Redirigir al hacer clic en el botón "Aceptar"
+                document.getElementById('btnAceptar').addEventListener('click', function () {
+                    window.location.href = 'view-request-supplier.aspx';
+                });
+            }
+        });
+    </script>
 </asp:Content>

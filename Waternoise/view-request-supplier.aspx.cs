@@ -43,6 +43,7 @@ namespace Waternoise
                 size: pageSize,
                 offset: (pageIndex - 1) * pageSize,
                 location: !string.IsNullOrEmpty(location) ? new List<string> { location } : null,
+                status: new List<string> { RequestStatus.OPEN.ToString() },
                 usernames: null, // Add if usernames filter is required
                 orderByColumn: "CreatedAt",
                 orderByOrder: orderByOrder,

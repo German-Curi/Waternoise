@@ -244,6 +244,7 @@
     <Content Include="images\logo3.png" />
     <Content Include="Index.aspx" />
     <Content Include="porfolio.aspx" />
+    <Content Include="profile-admin.aspx" />
     <Content Include="profile-applicant.aspx" />
     <Content Include="profile-supplier.aspx" />
     <Content Include="register-applicant.aspx" />
@@ -318,6 +319,13 @@
     </Compile>
     <Compile Include="porfolio.aspx.designer.cs">
       <DependentUpon>porfolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile-admin.aspx.cs">
+      <DependentUpon>profile-admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile-admin.aspx.designer.cs">
+      <DependentUpon>profile-admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="profile-applicant.aspx.cs">
       <DependentUpon>profile-applicant.aspx</DependentUpon>

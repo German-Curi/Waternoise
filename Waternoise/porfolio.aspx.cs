@@ -38,6 +38,12 @@ namespace Waternoise
             lblPageInfo.Text = $"Página {paginatedPortfolios.Page} de {paginatedPortfolios.TotalPages}";
             btnPrevious.Enabled = paginatedPortfolios.Page > 1;
             btnNext.Enabled = paginatedPortfolios.Page < paginatedPortfolios.TotalPages;
+            if(paginatedPortfolios.Results.Count == 0)
+            {
+                btnNext.Visible = false;
+                btnPrevious.Visible = false;
+                lblPageInfo.Text = "No se encuentran instancias creadas de portfolio";
+            }
         }
         protected void ChangePage(object sender, EventArgs e)
         {

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageApplicant.Master" AutoEventWireup="true" CodeBehind="profile-applicant.aspx.cs" Inherits="Waternoise.profile_applicant" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMaster.Master" AutoEventWireup="true" CodeBehind="profile-admin.aspx.cs" Inherits="Waternoise.profile_admin" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="form-title" style="text-align: left;">Configuración del Perfil</h2>
     <div class="catalog-container">             
@@ -18,4 +18,3 @@
         </div>     
     </div>
 </asp:Content>
-

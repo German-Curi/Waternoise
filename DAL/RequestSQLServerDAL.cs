@@ -208,6 +208,25 @@ namespace DAL
             }
         }
 
+        public Request Update(int id, RequestStatus status)
+        {
+            try
+            {
+                string storeProcedureName = "user_requests_update";
+                List<SqlParameter> parameters = new List<SqlParameter>() {
+                    new SqlParameter() { ParameterName = "@id", SqlDbType = SqlDbType.Int, Value = id},
+                    new SqlParameter() { ParameterName = "@status", SqlDbType = SqlDbType.VarChar, Value = status}
+                };
+
+                DataSet dataset = this.Execute(storeProcedureName, parameters);
+                return this.GetByID(id);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         private Request MapUserRequestFromDataRow(DataRow row)
         {
             Request entity = new Request

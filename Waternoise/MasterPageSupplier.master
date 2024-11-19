@@ -160,8 +160,8 @@
                         <a class="nav-link" href="porfolio.aspx"><i class="fa fa-table-list"></i> Catalogo</a>
                         <a class="nav-link" href="view-request-supplier.aspx"><i class="fa fa-envelope"></i> Solicitudes</a>
                         <a class="nav-link" href="#"><i class="fa fa-money-check-alt"></i> Suscripción</a>
-                        <a class="nav-link" href="#"><i class="fa fa-user-friends"></i> Asesores</a>
-                        <a class="nav-link" href="#"><i class="fa fa-poll"></i> Encuestas</a>
+<%--                        <a class="nav-link" href="#"><i class="fa fa-user-friends"></i> Asesores</a>
+                        <a class="nav-link" href="#"><i class="fa fa-poll"></i> Encuestas</a>--%>
                     </nav>
                     <div class="provider-section text-center">
                         <a class="nav-link provider" href="profile-supplier.aspx"><i class="fa fa-user"></i> <asp:Label ID="profileSupplier" runat="server" Text="-"></asp:Label></a>

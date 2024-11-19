@@ -22,7 +22,7 @@ namespace Waternoise
         private void LoadRequestData(int requestId)
         {
             RequestBLL requestBLL = new RequestBLL();
-            Request request = requestBLL.GetByID(requestId, Session["UserID"].ToString());
+            Request request = requestBLL.GetByID(requestId);
 
             if (request != null)
             {

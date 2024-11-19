@@ -35,7 +35,7 @@ namespace Waternoise
                 }
                 else if (_user.Roles.Contains(Role.ADMINISTRATOR))
                 {
-                    Response.Redirect("UserManagement.aspx");
+                    Response.Redirect("profile-admin.aspx");
                 }
                 else if (_user.Roles.Contains(Role.USER))
                 {

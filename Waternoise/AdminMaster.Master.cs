@@ -11,17 +11,7 @@ namespace Waternoise
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void logoutUser_Click(object sender, EventArgs e)
-        {
-            // Limpiar variables de sesión
-            Session.Clear();
-            Session.Abandon();
-
-            // Redirigir a la página de inicio (index.aspx)
-            Response.Redirect("Index.aspx");
+            profileAdmin.Text = Session["UserUsername"].ToString();
         }
     }
 }

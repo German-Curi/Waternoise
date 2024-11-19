@@ -49,6 +49,7 @@
     <Compile Include="PersistentEntity.cs" />
     <Compile Include="Portfolio.cs" />
     <Compile Include="Product.cs" />
+    <Compile Include="Proposal.cs" />
     <Compile Include="Request.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

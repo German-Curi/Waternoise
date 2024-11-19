@@ -26,12 +26,23 @@ namespace BLL
                 throw ex;
             }
         }
-        public Request GetByID(int id, string token)
+        public Request Update(int id, RequestStatus status)
         {
             try
             {
-                int userId = Convert.ToInt32(token);
-                User user = mapUser.GetByID(userId);
+                Request createdRequest = mapRequest.Update(id, status);
+                return createdRequest;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Request GetByID(int id)
+        {
+            try
+            {
                 Request request = mapRequest.GetByID(id);
                 return request;
             }
