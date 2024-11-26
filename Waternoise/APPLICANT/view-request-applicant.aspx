@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageApplicant.Master" AutoEventWireup="true" CodeBehind="view-request-applicant.aspx.cs" Inherits="Waternoise.view_request_applicant" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/APPLICANT/MasterPageApplicant.Master" AutoEventWireup="true" CodeBehind="view-request-applicant.aspx.cs" Inherits="Waternoise.view_request_applicant" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">

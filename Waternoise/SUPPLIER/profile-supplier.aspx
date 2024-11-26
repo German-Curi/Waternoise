@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageSupplier.master" AutoEventWireup="true" CodeBehind="profile-supplier.aspx.cs" Inherits="Waternoise.profile_supplier" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SUPPLIER/MasterPageSupplier.master" AutoEventWireup="true" CodeBehind="profile-supplier.aspx.cs" Inherits="Waternoise.profile_supplier" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
     Perfil del Proveedor
 </asp:Content>

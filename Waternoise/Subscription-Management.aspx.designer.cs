@@ -11,16 +11,16 @@ namespace Waternoise
 {
 
 
-    public partial class UserManagement
+    public partial class Subscription_Management
     {
 
         /// <summary>
-        /// Control gvUsers.
+        /// Control gvSubscriptions.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvUsers;
+        protected global::System.Web.UI.WebControls.GridView gvSubscriptions;
     }
 }

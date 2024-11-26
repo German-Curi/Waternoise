@@ -219,14 +219,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="APPLICANT\finalized-proposals-applicant.aspx" />
+    <Content Include="APPLICANT\proposals-applicant.aspx" />
+    <Content Include="APPLICANT\view-finalized-proposal-applicant.aspx" />
+    <Content Include="APPLICANT\view-proposal-applicant.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="create-proposal-supplier.aspx" />
-    <Content Include="create-request.aspx" />
-    <Content Include="createportfolio.aspx" />
+    <Content Include="Subscription-Management.aspx" />
+    <Content Include="SUPPLIER\create-proposal-supplier.aspx" />
+    <Content Include="APPLICANT\create-request.aspx" />
+    <Content Include="SUPPLIER\create-suscription.aspx" />
+    <Content Include="SUPPLIER\createportfolio.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -243,20 +249,24 @@
     <Content Include="images\logo2.png" />
     <Content Include="images\logo3.png" />
     <Content Include="Index.aspx" />
-    <Content Include="porfolio.aspx" />
+    <Content Include="SUPPLIER\finalized-proposals-supplier.aspx" />
+    <Content Include="SUPPLIER\porfolio.aspx" />
     <Content Include="profile-admin.aspx" />
-    <Content Include="profile-applicant.aspx" />
-    <Content Include="profile-supplier.aspx" />
+    <Content Include="APPLICANT\profile-applicant.aspx" />
+    <Content Include="SUPPLIER\profile-supplier.aspx" />
     <Content Include="register-applicant.aspx" />
     <Content Include="register-supplier.aspx" />
     <Content Include="register.aspx" />
-    <Content Include="requestsapplicant.aspx" />
+    <Content Include="APPLICANT\requestsapplicant.aspx" />
     <Content Include="styles\global-styles.css" />
     <Content Include="styles\portfolio-styles.css" />
+    <Content Include="SUPPLIER\proposal-supplier.aspx" />
+    <Content Include="SUPPLIER\view-finalized-proposal-supplier.aspx" />
     <Content Include="UserManagement.aspx" />
-    <Content Include="view-request-applicant.aspx" />
-    <Content Include="view-request-supplier.aspx" />
-    <Content Include="viewPortfolio.aspx" />
+    <Content Include="SUPPLIER\view-proposal-supplier.aspx" />
+    <Content Include="APPLICANT\view-request-applicant.aspx" />
+    <Content Include="SUPPLIER\view-request-supplier.aspx" />
+    <Content Include="SUPPLIER\viewPortfolio.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -268,25 +278,67 @@
     <Compile Include="AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="create-proposal-supplier.aspx.cs">
+    <Compile Include="APPLICANT\finalized-proposals-applicant.aspx.cs">
+      <DependentUpon>finalized-proposals-applicant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APPLICANT\finalized-proposals-applicant.aspx.designer.cs">
+      <DependentUpon>finalized-proposals-applicant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="APPLICANT\proposals-applicant.aspx.cs">
+      <DependentUpon>proposals-applicant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APPLICANT\proposals-applicant.aspx.designer.cs">
+      <DependentUpon>proposals-applicant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="APPLICANT\view-finalized-proposal-applicant.aspx.cs">
+      <DependentUpon>view-finalized-proposal-applicant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APPLICANT\view-finalized-proposal-applicant.aspx.designer.cs">
+      <DependentUpon>view-finalized-proposal-applicant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="APPLICANT\view-proposal-applicant.aspx.cs">
+      <DependentUpon>view-proposal-applicant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APPLICANT\view-proposal-applicant.aspx.designer.cs">
+      <DependentUpon>view-proposal-applicant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription-Management.aspx.cs">
+      <DependentUpon>Subscription-Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Subscription-Management.aspx.designer.cs">
+      <DependentUpon>Subscription-Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SUPPLIER\create-proposal-supplier.aspx.cs">
       <DependentUpon>create-proposal-supplier.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="create-proposal-supplier.aspx.designer.cs">
+    <Compile Include="SUPPLIER\create-proposal-supplier.aspx.designer.cs">
       <DependentUpon>create-proposal-supplier.aspx</DependentUpon>
     </Compile>
-    <Compile Include="create-request.aspx.cs">
+    <Compile Include="APPLICANT\create-request.aspx.cs">
       <DependentUpon>create-request.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="create-request.aspx.designer.cs">
+    <Compile Include="APPLICANT\create-request.aspx.designer.cs">
       <DependentUpon>create-request.aspx</DependentUpon>
     </Compile>
-    <Compile Include="createportfolio.aspx.cs">
+    <Compile Include="SUPPLIER\create-suscription.aspx.cs">
+      <DependentUpon>create-suscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SUPPLIER\create-suscription.aspx.designer.cs">
+      <DependentUpon>create-suscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SUPPLIER\createportfolio.aspx.cs">
       <DependentUpon>createportfolio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="createportfolio.aspx.designer.cs">
+    <Compile Include="SUPPLIER\createportfolio.aspx.designer.cs">
       <DependentUpon>createportfolio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -299,25 +351,32 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPageApplicant.Master.cs">
+    <Compile Include="APPLICANT\MasterPageApplicant.Master.cs">
       <DependentUpon>MasterPageApplicant.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPageApplicant.Master.designer.cs">
+    <Compile Include="APPLICANT\MasterPageApplicant.Master.designer.cs">
       <DependentUpon>MasterPageApplicant.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPageSupplier.master.cs">
+    <Compile Include="SUPPLIER\finalized-proposals-supplier.aspx.cs">
+      <DependentUpon>finalized-proposals-supplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SUPPLIER\finalized-proposals-supplier.aspx.designer.cs">
+      <DependentUpon>finalized-proposals-supplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SUPPLIER\MasterPageSupplier.master.cs">
       <DependentUpon>MasterPageSupplier.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPageSupplier.master.designer.cs">
+    <Compile Include="SUPPLIER\MasterPageSupplier.master.designer.cs">
       <DependentUpon>MasterPageSupplier.master</DependentUpon>
     </Compile>
-    <Compile Include="porfolio.aspx.cs">
+    <Compile Include="SUPPLIER\porfolio.aspx.cs">
       <DependentUpon>porfolio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="porfolio.aspx.designer.cs">
+    <Compile Include="SUPPLIER\porfolio.aspx.designer.cs">
       <DependentUpon>porfolio.aspx</DependentUpon>
     </Compile>
     <Compile Include="profile-admin.aspx.cs">
@@ -327,18 +386,18 @@
     <Compile Include="profile-admin.aspx.designer.cs">
       <DependentUpon>profile-admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="profile-applicant.aspx.cs">
+    <Compile Include="APPLICANT\profile-applicant.aspx.cs">
       <DependentUpon>profile-applicant.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="profile-applicant.aspx.designer.cs">
+    <Compile Include="APPLICANT\profile-applicant.aspx.designer.cs">
       <DependentUpon>profile-applicant.aspx</DependentUpon>
     </Compile>
-    <Compile Include="profile-supplier.aspx.cs">
+    <Compile Include="SUPPLIER\profile-supplier.aspx.cs">
       <DependentUpon>profile-supplier.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="profile-supplier.aspx.designer.cs">
+    <Compile Include="SUPPLIER\profile-supplier.aspx.designer.cs">
       <DependentUpon>profile-supplier.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -363,12 +422,26 @@
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="requestsapplicant.aspx.cs">
+    <Compile Include="APPLICANT\requestsapplicant.aspx.cs">
       <DependentUpon>requestsapplicant.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="requestsapplicant.aspx.designer.cs">
+    <Compile Include="APPLICANT\requestsapplicant.aspx.designer.cs">
       <DependentUpon>requestsapplicant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SUPPLIER\proposal-supplier.aspx.cs">
+      <DependentUpon>proposal-supplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SUPPLIER\proposal-supplier.aspx.designer.cs">
+      <DependentUpon>proposal-supplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SUPPLIER\view-finalized-proposal-supplier.aspx.cs">
+      <DependentUpon>view-finalized-proposal-supplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SUPPLIER\view-finalized-proposal-supplier.aspx.designer.cs">
+      <DependentUpon>view-finalized-proposal-supplier.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserManagement.aspx.cs">
       <DependentUpon>UserManagement.aspx</DependentUpon>
@@ -377,32 +450,39 @@
     <Compile Include="UserManagement.aspx.designer.cs">
       <DependentUpon>UserManagement.aspx</DependentUpon>
     </Compile>
-    <Compile Include="view-request-applicant.aspx.cs">
+    <Compile Include="SUPPLIER\view-proposal-supplier.aspx.cs">
+      <DependentUpon>view-proposal-supplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SUPPLIER\view-proposal-supplier.aspx.designer.cs">
+      <DependentUpon>view-proposal-supplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="APPLICANT\view-request-applicant.aspx.cs">
       <DependentUpon>view-request-applicant.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="view-request-applicant.aspx.designer.cs">
+    <Compile Include="APPLICANT\view-request-applicant.aspx.designer.cs">
       <DependentUpon>view-request-applicant.aspx</DependentUpon>
     </Compile>
-    <Compile Include="view-request-supplier.aspx.cs">
+    <Compile Include="SUPPLIER\view-request-supplier.aspx.cs">
       <DependentUpon>view-request-supplier.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="view-request-supplier.aspx.designer.cs">
+    <Compile Include="SUPPLIER\view-request-supplier.aspx.designer.cs">
       <DependentUpon>view-request-supplier.aspx</DependentUpon>
     </Compile>
-    <Compile Include="viewPortfolio.aspx.cs">
+    <Compile Include="SUPPLIER\viewPortfolio.aspx.cs">
       <DependentUpon>viewPortfolio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="viewPortfolio.aspx.designer.cs">
+    <Compile Include="SUPPLIER\viewPortfolio.aspx.designer.cs">
       <DependentUpon>viewPortfolio.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MasterPageSupplier.master" />
+    <Content Include="SUPPLIER\MasterPageSupplier.master" />
     <Content Include="AdminMaster.Master" />
-    <Content Include="MasterPageApplicant.Master" />
+    <Content Include="APPLICANT\MasterPageApplicant.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

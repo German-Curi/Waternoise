@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageSupplier.master" AutoEventWireup="true" CodeBehind="create-proposal-supplier.aspx.cs" Inherits="Waternoise.create_proposal_supplier" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SUPPLIER/MasterPageSupplier.master" AutoEventWireup="true" CodeBehind="create-proposal-supplier.aspx.cs" Inherits="Waternoise.create_proposal_supplier" %>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <div class="col px-4 py-5">
         <h2 class="form-title" style="text-align: left;">

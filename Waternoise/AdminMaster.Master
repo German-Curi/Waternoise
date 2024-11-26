@@ -156,6 +156,8 @@
                     </div>
                     <nav class="nav flex-column">
                         <a class="nav-link" href="UserManagement.aspx"><i class="fa fa-envelope"></i> Gestión Usuarios</a>
+                        <a class="nav-link" href="Subscription-Management.aspx"><i class="fa fa-money-check-alt"></i> Gestión Suscripciones</a>
+                        
                     </nav>
                     <div class="provider-section text-center">
                         <a class="nav-link provider" href="profile-admin.aspx"><i class="fa fa-user"></i> <asp:Label ID="profileAdmin" runat="server" Text="-"></asp:Label></a>

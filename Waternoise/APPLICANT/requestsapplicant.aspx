@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageApplicant.Master" AutoEventWireup="true" CodeBehind="requestsapplicant.aspx.cs" Inherits="Waternoise.requestsapplicant" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/APPLICANT/MasterPageApplicant.Master" AutoEventWireup="true" CodeBehind="requestsapplicant.aspx.cs" Inherits="Waternoise.requestsapplicant" %>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="~/styles/portfolio-styles.css" />
 </asp:Content>

@@ -49,6 +49,7 @@
     <Compile Include="PortfolioBLL.cs" />
     <Compile Include="ProposalBLL.cs" />
     <Compile Include="RequestBLL.cs" />
+    <Compile Include="SubscriptionBLL.cs" />
     <Compile Include="UserBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

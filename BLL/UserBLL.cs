@@ -46,6 +46,18 @@ namespace BLL
                 throw ex;
             }
         }
+        public List<User> Getall()
+        {
+            try
+            {
+                List<User> usersList = mapUser.GetAll();
+                return usersList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         private User UpdateUserLastLogin(User user)
         {
             try

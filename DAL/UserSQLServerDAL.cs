@@ -146,7 +146,7 @@ namespace DAL
             }
         }
 
-        public IList<User> GetAll()
+        public List<User> GetAll()
         {
             List<User> usersList = new List<User>();
             try

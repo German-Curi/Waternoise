@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageSupplier.master" AutoEventWireup="true" CodeBehind="createportfolio.aspx.cs" Inherits="Waternoise.createportfolio" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SUPPLIER/MasterPageSupplier.master" AutoEventWireup="true" CodeBehind="createportfolio.aspx.cs" Inherits="Waternoise.createportfolio" %>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <div class="col px-4 py-5">
         <h2 class="form-title" style="text-align: left;">

@@ -1,15 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageSupplier.master" AutoEventWireup="true" CodeBehind="view-request-supplier.aspx.cs" Inherits="Waternoise.view_request_supplier" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/APPLICANT/MasterPageApplicant.Master" AutoEventWireup="true" CodeBehind="finalized-proposals-applicant.aspx.cs" Inherits="Waternoise.APPLICANT.finalized_proposals_applicant" %>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" type="text/css" href="~/styles/portfolio-styles.css" />
+    <link rel="stylesheet" type="text/css" href="~/styles/proposal-styles.css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="d-flex justify-content-between align-items-center">
-        <h2 class="form-title">Solicitudes de Proveedor</h2>
+        <h2 class="form-title">Propuestas Finalizadas</h2>
     </div>
     <br/>
 
-    <!-- Filtros para fecha, orden y ubicación -->
+    <!-- Filtros -->
     <div class="filter-controls">
         <label>Desde:</label>
         <asp:TextBox ID="txtFromDate" runat="server" CssClass="date-input" TextMode="Date" />
@@ -30,23 +30,24 @@
     </div>
     <br/>
 
-    <asp:Repeater ID="rptRequests" runat="server" OnItemCommand="rptRequests_ItemCommand">
+    <!-- Repeater para mostrar propuestas -->
+    <asp:Repeater ID="rptProposals" runat="server" OnItemCommand="rptProposals_ItemCommand">
         <ItemTemplate>
             <div class="catalog-container">
-                <h3><%# Eval("NameRequest") %></h3>
+                <h3>Propuesta: #<%# Eval("ID") %></h3>
                 <p>
-                    Número: <%# Eval("ID") %> |
+                    Solicitud: #<%# Eval("RequestID") %> |
+                    Precio Total: $<%# Eval("TotalPrice") %> |
                     Estado: <%# Eval("Status") %> |
-                    Tipo de Problema: <%# Eval("ProblemType") %> |
-                    Fecha de Creación: <%# Eval("CreatedAt", "{0:dd/MM/yyyy}") %> |
-                    Fecha de Actualización: <%# Eval("UpdatedAt", "{0:dd/MM/yyyy}") %>
+                    Fecha de Envío: <%# Eval("CreatedAt", "{0:dd/MM/yyyy}") %>
                 </p>
-                <asp:LinkButton ID="btnPropose" runat="server" Text="Proponer" CssClass="btn-propose"
-                    CommandName="ProposeRequest" CommandArgument='<%# Eval("ID") %>' />
+                <asp:LinkButton ID="btnView" runat="server" Text="Visualizar" CssClass="btn-view"
+                    CommandName="ViewProposal" CommandArgument='<%# Eval("ID") %>' />
             </div>
         </ItemTemplate>
     </asp:Repeater>
 
+    <!-- Controles de paginación -->
     <div class="pagination-controls">
         <asp:Button ID="btnPrevious" runat="server" Text="Anterior" OnClick="ChangePage" CommandArgument="Previous" CssClass="btn-pagination" />
         <asp:Label ID="lblPageInfo" runat="server" CssClass="page-info"></asp:Label>

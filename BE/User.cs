@@ -14,15 +14,15 @@ namespace BE
     }
     public class User : PersistentEntity
     {
-        public int ID;
-        public string Username;
-        public string Password;
-        public string Email;
-        public int LoginRetries;
-        public bool IsBlocked;
-        public DateTime? LastLogin;
-        public List<Role> Roles;
-        public int CompanyID;
+        public int ID { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public int LoginRetries { get; set; }
+        public bool IsBlocked { get; set; }
+        public DateTime? LastLogin { get; set; }
+        public List<Role> Roles { get; set; }
+        public int CompanyID { get; set; }
 
         public User() { }
         public User(

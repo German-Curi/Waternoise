@@ -23,6 +23,7 @@ namespace Waternoise
         }
         private void LoadRequests()
         {
+            ProposalBLL proposalBll = new ProposalBLL();
             int pageIndex = (int)(Session["pageIndex"] ?? 1);
             DateTime? fromDate = null;
             DateTime? toDate = null;
@@ -50,7 +51,19 @@ namespace Waternoise
                 fromDate: fromDate,
                 toDate: toDate
             );
-
+            var requestsToRemove = new List<Request>();
+            foreach (Request req in paginatedRequests.Results)
+            {
+                var propuesta = proposalBll.GetByRequestID(req.ID, int.Parse(Session["UserID"].ToString()));
+                if (propuesta!= null)
+                {
+                    requestsToRemove.Add(req);
+                }
+            }
+            foreach (Request req in requestsToRemove)
+            {
+                paginatedRequests.Results.Remove(req);
+            }
             rptRequests.DataSource = paginatedRequests.Results;
             rptRequests.DataBind();
 

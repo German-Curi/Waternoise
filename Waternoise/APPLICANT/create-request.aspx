@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageApplicant.Master" AutoEventWireup="true" CodeBehind="create-request.aspx.cs" Inherits="Waternoise.create_request" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/APPLICANT/MasterPageApplicant.Master" AutoEventWireup="true" CodeBehind="create-request.aspx.cs" Inherits="Waternoise.create_request" %>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <div class="col px-4 py-5">
         <h2 class="form-title" style="text-align: left;">

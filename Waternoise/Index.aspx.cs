@@ -31,7 +31,7 @@ namespace Waternoise
                 Session["UserUsername"] = _user.Username;
                 if (_user.Roles.Contains(Role.ADVISOR))
                 {
-                    Response.Redirect("profile-supplier.aspx");
+                    Response.Redirect(@"SUPPLIER\profile-supplier.aspx");
                 }
                 else if (_user.Roles.Contains(Role.ADMINISTRATOR))
                 {
@@ -39,7 +39,7 @@ namespace Waternoise
                 }
                 else if (_user.Roles.Contains(Role.USER))
                 {
-                    Response.Redirect("profile-applicant.aspx");
+                    Response.Redirect(@"APPLICANT\profile-applicant.aspx");
                 }
             }
             catch (Exception ex)

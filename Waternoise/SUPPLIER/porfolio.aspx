@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageSupplier.master" AutoEventWireup="true" CodeBehind="porfolio.aspx.cs" Inherits="Waternoise.porfolio" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SUPPLIER/MasterPageSupplier.master" AutoEventWireup="true" CodeBehind="porfolio.aspx.cs" Inherits="Waternoise.porfolio" %>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="~/styles/portfolio-styles.css" />
 </asp:Content>

@@ -129,8 +129,6 @@ namespace Waternoise
                 proposal.Status = ProposalStatus.PENDING;
 
                 proposalBLL.Create(proposal, Session["UserID"].ToString());
-                requestBLL.Update(requestAux.ID,RequestStatus.PENDING);
-
                 hdnMostrarModal.Value = "true";
             }
         }
