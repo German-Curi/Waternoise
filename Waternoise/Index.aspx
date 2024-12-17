@@ -145,15 +145,17 @@
                 <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control" id="username" name="username" placeholder="username"/>
             </div>
+        
             <div class="mb-3">
                 <label for="password" class="form-label">Contraseña</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="password" />
             </div>
-            <div class="d-flex justify-content-between">
+            <asp:Label ID="error" runat="server" Text=""></asp:Label>
+            <div class="d-flex justify-content-between">                
                 <asp:Button ID="btnLogin" runat="server" CssClass="blue-btn btn" Text="Ingresar" OnClick="btnLogin_Click" />
                 <button type="button" class="blue-btn btn" id="cancel-btn">Cancelar</button>
             </div>
-        
+            
     </div>
     </form>
     <script>

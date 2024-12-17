@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/APPLICANT/MasterPageApplicant.Master" AutoEventWireup="true" CodeBehind="create-request.aspx.cs" Inherits="Waternoise.create_request" %>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="col px-4 py-5">
+    <div class="col px-1 py-1">
         <h2 class="form-title" style="text-align: left;">
             <a href="requestsapplicant.aspx">Solicitudes</a> &rarr; Crear Solicitud
         </h2>
@@ -56,7 +56,6 @@
                         <asp:ListItem Text="Seleccione" Value="" />
                         <asp:ListItem Text="Dólar" Value="Dólar" />
                         <asp:ListItem Text="Peso" Value="Peso" />
-                        <asp:ListItem Text="Real" Value="Real" />
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="rfvMoneda" runat="server" ControlToValidate="ddlMoneda" InitialValue="" ErrorMessage="Seleccione una moneda." CssClass="text-danger" />
                 </div>

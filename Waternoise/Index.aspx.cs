@@ -44,7 +44,8 @@ namespace Waternoise
             }
             catch (Exception ex)
             {
-                throw ex;
+                error.Text = "Credenciales no validas";
+                //throw ex;
             }
 
         }
